@@ -68,3 +68,11 @@ from google.colab import userdata
 GOOGLE_API_KEY=userdata.get('geminikey')
 genai.configure(api_key=GOOGLE_API_KEY)
 ##########################################################
+model = genai.GenerativeModel("gemini-3.5-flash")
+
+prompt = "Hello"
+
+response = model.generate_content(prompt)
+
+display(Markdown(response.text))
+#################################################################
