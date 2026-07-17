@@ -76,3 +76,8 @@ response = model.generate_content(prompt)
 
 display(Markdown(response.text))
 #################################################################
+prompt = """
+Classify sentiment of review as positive, negative or neutral:
+I go to this restaurant every week, I love it so much.
+"""
+Markdown(model.generate_content(prompt).text)
