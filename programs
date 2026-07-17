@@ -144,4 +144,10 @@ print(response.text)
 
 ############################################################
 A futuristic classroom where an AI humanoid robot teaches Python programming to engineering students. The classroom has - Blue ambient lighting - Interactive holographic displays - Large digital screens - Students working on laptops - Modern smart classroom - Ultra realistic
+##############################################
+!pip install pillow
+from PIL import Image
+image = Image.open("/content/image1.png")
 
+image
+#####################################################################
