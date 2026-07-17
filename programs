@@ -21,3 +21,32 @@ ner = pipeline("ner", grouped_entities = True)
 sentence = "     "
 ner(sentence)
 ########################################################################
+from transformers import pipeline
+
+# Configure and load the model only once
+qa_pipeline = pipeline(
+    task="question-answering",
+    model="distilbert-base-cased-distilled-squad"
+)
+
+
+
+# Context can be reused for multiple questions
+context = """
+
+"""
+
+# Question 1
+result1 = qa_pipeline(
+    question=" ",
+    context=context
+)
+print(result1["answer"])
+
+# Question 2
+result2 = qa_pipeline(
+    question="     ",
+    context=context
+)
+print(result2["answer"])
+
