@@ -104,3 +104,17 @@ response = model.generate_content(prompt)
 json_text = response.text.strip()
 print(json_text)
 ################################################################
+prompt = """
+A farmer has 17 sheep.
+
+All but 9 die.
+
+How many sheep died?
+
+Answer with only the final answer.
+"""
+
+response = model.generate_content(prompt)
+
+print(response.text)
+###########################################################
