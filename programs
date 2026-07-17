@@ -151,3 +151,64 @@ image = Image.open("/content/image1.png")
 
 image
 #####################################################################
+analysis_prompt = """
+Describe this image in detail.
+
+Mention
+
+- Main objects
+- People
+- Activities
+- Environment
+- Colors
+- Technology
+"""
+#################################################
+client = genai.Client(api_key=GOOGLE_API_KEY)
+##################################################
+response = client.models.generate_content(
+    model="gemini-3.5-flash",
+    contents=[image, analysis_prompt]
+)
+
+caption = response.text
+
+print(caption)
+##########################################################
+original_prompt = """ A futuristic classroom where an AI humanoid robot teaches Python programming to engineering students. The classroom has - Blue ambient lighting - Interactive holographic displays - Large digital screens - Students working on laptops - Modern smart classroom - Ultra realistic"""
+########################################################
+evaluation_prompt = f"""
+You are an AI evaluator.
+
+Compare the ORIGINAL PROMPT with the GENERATED IMAGE DESCRIPTION.
+
+Original Prompt
+
+{original_prompt}
+
+Generated Caption
+
+{caption}
+
+Evaluate
+
+1. Accuracy (1-5)
+
+2. Relevance (1-5)
+
+3. Completeness (1-5)
+
+4. Missing Objects
+
+5. Alignment Percentage
+
+Return your answer as a table.
+"""
+
+#####################################################
+judge = client.models.generate_content(
+    model="gemini-3.5-flash",
+    contents=evaluation_prompt
+)
+
+print(judge.text)
