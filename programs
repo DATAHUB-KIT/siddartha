@@ -164,6 +164,12 @@ Mention
 - Technology
 """
 #################################################
+from google import genai
+from google.genai import types
+import os
+import google.generativeai as genai
+from google.colab import userdata
+GOOGLE_API_KEY=userdata.get('geminikey')
 client = genai.Client(api_key=GOOGLE_API_KEY)
 ##################################################
 response = client.models.generate_content(
