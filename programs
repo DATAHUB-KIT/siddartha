@@ -143,4 +143,5 @@ response2 = model.generate_content(prompt2)
 print(response.text)
 
 ############################################################
+A futuristic classroom where an AI humanoid robot teaches Python programming to engineering students. The classroom has - Blue ambient lighting - Interactive holographic displays - Large digital screens - Students working on laptops - Modern smart classroom - Ultra realistic
 
