@@ -2,3 +2,6 @@
 from transformers import pipeline
 classifier=pipeline('sentiment-analysis')
 classifier('dolphin restuarant is very good')
+##########################################################
+model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
+################################################################
