@@ -51,5 +51,12 @@ result2 = qa_pipeline(
 print(result2["answer"])
 #########################################################################################
 
+create api key 
+https://ai.google.dev/gemini-api/docs/api-key
 
+create defualt project 
+create a key 
+and copy a key
+
+#################################################################
 
