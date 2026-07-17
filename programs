@@ -16,3 +16,8 @@ classifier = pipeline("sentiment-analysis",
 
 classifier('ఈ రెస్టారెంట్ చాలా బాగుంది')
 #####################################################################
+from transformers import pipeline
+ner = pipeline("ner", grouped_entities = True)
+sentence = "     "
+ner(sentence)
+########################################################################
