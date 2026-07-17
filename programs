@@ -118,3 +118,29 @@ response = model.generate_content(prompt)
 
 print(response.text)
 ###########################################################
+prompt1 = """
+Explain Machine Learning in about 100 words.
+"""
+
+
+prompt2 = """
+Explain Machine Learning in about 100 words.
+Include:
+- Definition
+- Example
+- Applications
+
+Return the answer as bullet points.
+"""
+response1 = model.generate_content(prompt1)
+
+print(response.text)
+
+
+
+response2 = model.generate_content(prompt2)
+
+print(response.text)
+
+############################################################
+
